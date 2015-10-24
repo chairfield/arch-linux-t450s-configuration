@@ -1,0 +1,10 @@
+Command is:
+i3-save-tree -workspace N > ~/.dotfiles/i3/workspace-N.json
+
+When encountering the following error:
+"Can't locate AnyEvent/I3.pm in @INC (you may need to install the AnyEvent::I3 module)""
+
+Install the following two packages from the AUR:
+perl-anyevent-i3
+perl-json-xs
+
