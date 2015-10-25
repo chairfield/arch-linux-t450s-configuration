@@ -1,0 +1,9 @@
+I installed the 32-bit libs, useful for Skype, Steam, and Wine
+
+I installed pulseaudio-ctl to enable the keyboard keys, and it created a config here:
+~/.config/pulseaudio-ctl/config
+- I can get a little libnotify graphic by uncommenting a line in here
+
+- Used xev to find that my F4 is XF86AudioMicMute
+- Installed alsa-utils to get alsamixer to manually unmute
+- My audio card is source 1, not 0; fixed
