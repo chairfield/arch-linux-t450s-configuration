@@ -1,0 +1,4 @@
+While I like airline, I had to disable it. I was having a similar problem to this guy:
+    https://www.reddit.com/r/vim/comments/1trdzm/does_anyone_else_ever_have_this_problem_with_vim/
+
+This occurred even when airline was the only plugin installed (see: .vim-simple and .vimrc-simple)
