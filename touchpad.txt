@@ -1,0 +1,14 @@
+- I'm using libinput
+- xinput list-props 12 // to view props of my touchpad
+
+- See following for enabling tapping:
+    http://who-t.blogspot.com/2015/01/xf86-input-libinput-compatibility-with.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Who-t+%28Who-T%29
+    Section "InputClass"
+        Identifier "enable tapping"
+        MatchDriver "libinput"
+        MatchProduct "my touchpad"
+        Option "Tapping" "on"
+    EndSection
+
+- Recommended to use InputClass rather than configure on a per-device basis
+    https://www.mankier.com/4/libinput
