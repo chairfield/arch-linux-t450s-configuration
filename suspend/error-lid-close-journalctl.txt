@@ -1,0 +1,42 @@
+Oct 30 14:16:37 ARCHER root[17689]: LID closed
+Oct 30 14:16:38 ARCHER kernel: PM: Syncing filesystems ... done.
+Oct 30 14:16:38 ARCHER kernel: PM: Preparing system for sleep (mem)
+Oct 30 14:16:38 ARCHER kernel: Freezing user space processes ... (elapsed 0.001 seconds) done.
+Oct 30 14:16:38 ARCHER kernel: Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+Oct 30 14:16:38 ARCHER kernel: PM: Suspending system (mem)
+Oct 30 14:16:38 ARCHER kernel: Suspending console(s) (use no_console_suspend to debug)
+Oct 30 14:16:38 ARCHER kernel: wlp3s0: deauthenticating from 1c:6a:7a:2f:f2:fd by local choice (Reason: 
+Oct 30 14:16:38 ARCHER kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache
+Oct 30 14:16:38 ARCHER kernel: sd 2:0:0:0: [sdb] Synchronizing SCSI cache
+Oct 30 14:16:38 ARCHER kernel: sd 2:0:0:0: [sdb] Stopping disk
+Oct 30 14:16:38 ARCHER kernel: sd 0:0:0:0: [sda] Stopping disk
+Oct 30 14:16:38 ARCHER kernel: e1000e: EEE TX LPI TIMER: 00000011
+E Oct 30 14:16:38 ARCHER kernel: pci_pm_suspend(): hcd_pci_suspend+0x0/0x30 [usbcore] returns -16
+E Oct 30 14:16:38 ARCHER kernel: dpm_run_callback(): pci_pm_suspend+0x0/0x150 returns -16
+E Oct 30 14:16:38 ARCHER kernel: PM: Device 0000:00:14.0 failed to suspend async: error -16
+E Oct 30 14:16:38 ARCHER kernel: PM: Some devices failed to suspend, or early wake event detected
+Oct 30 14:16:38 ARCHER kernel: rtc_cmos 00:02: System wakeup disabled by ACPI
+Oct 30 14:16:38 ARCHER kernel: sd 0:0:0:0: [sda] Starting disk
+Oct 30 14:16:38 ARCHER kernel: sd 2:0:0:0: [sdb] Starting disk
+Oct 30 14:16:38 ARCHER kernel: xhci_hcd 0000:00:14.0: port 2 resume PLC timeout
+Oct 30 14:16:38 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:16:38 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:16:38 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:16:38 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:16:38 ARCHER kernel: ata3: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered ou
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered ou
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:16:38 ARCHER kernel: ata3.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:16:38 ARCHER kernel: ata3.00: configured for UDMA/133
+Oct 30 14:16:38 ARCHER kernel: PM: resume of devices complete after 327.780 msecs
+Oct 30 14:16:38 ARCHER kernel: PM: Finishing wakeup.
+Oct 30 14:16:38 ARCHER kernel: Restarting tasks ...
+Oct 30 14:16:38 ARCHER kernel: usb 1-3: USB disconnect, device number 11
+Oct 30 14:16:38 ARCHER kernel: done.
+Oct 30 14:16:38 ARCHER dhcpcd[11401]: wlp3s0: carrier lost
+

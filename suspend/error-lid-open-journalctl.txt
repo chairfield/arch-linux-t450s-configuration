@@ -1,0 +1,136 @@
+Oct 30 14:24:17 ARCHER kernel: PM: Syncing filesystems ... done.
+Oct 30 14:24:17 ARCHER kernel: PM: Preparing system for sleep (freeze)
+Oct 30 14:24:17 ARCHER kernel: Freezing user space processes ... (elapsed 0.001 seconds) done.
+Oct 30 14:24:17 ARCHER kernel: Freezing remaining freezable tasks ... (elapsed 0.129 seconds) done.
+Oct 30 14:24:17 ARCHER kernel: PM: Suspending system (freeze)
+Oct 30 14:24:17 ARCHER kernel: Suspending console(s) (use no_console_suspend to debug)
+Oct 30 14:24:17 ARCHER kernel: psmouse serio1: synaptics: queried max coordinates: x [..5676], y [..4758]
+Oct 30 14:24:17 ARCHER kernel: psmouse serio1: synaptics: queried min coordinates: x [1266..], y [1096..]
+Oct 30 14:24:17 ARCHER kernel: sd 2:0:0:0: [sdb] Synchronizing SCSI cache
+Oct 30 14:24:17 ARCHER kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache
+Oct 30 14:24:17 ARCHER kernel: sd 2:0:0:0: [sdb] Stopping disk
+Oct 30 14:24:17 ARCHER kernel: sd 0:0:0:0: [sda] Stopping disk
+Oct 30 14:24:17 ARCHER kernel: e1000e: EEE TX LPI TIMER: 00000011
+Oct 30 14:24:17 ARCHER kernel: PM: suspend of devices complete after 1563.027 msecs
+Oct 30 14:24:17 ARCHER kernel: PM: late suspend of devices complete after 17.431 msecs
+Oct 30 14:24:17 ARCHER kernel: ehci-pci 0000:00:1d.0: System wakeup enabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: e1000e 0000:00:19.0: System wakeup enabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: xhci_hcd 0000:00:14.0: System wakeup enabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: PM: noirq suspend of devices complete after 16.187 msecs
+Oct 30 14:24:17 ARCHER kernel: PM: suspend-to-idle
+Oct 30 14:24:17 ARCHER kernel: PM: resume from suspend-to-idle
+Oct 30 14:24:17 ARCHER kernel: ehci-pci 0000:00:1d.0: System wakeup disabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: xhci_hcd 0000:00:14.0: System wakeup disabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: PM: noirq resume of devices complete after 17.360 msecs
+Oct 30 14:24:17 ARCHER kernel: PM: early resume of devices complete after 9.586 msecs
+Oct 30 14:24:17 ARCHER kernel: e1000e 0000:00:19.0: System wakeup disabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: rtc_cmos 00:02: System wakeup disabled by ACPI
+Oct 30 14:24:17 ARCHER kernel: sd 2:0:0:0: [sdb] Starting disk
+Oct 30 14:24:17 ARCHER kernel: sd 0:0:0:0: [sda] Starting disk
+Oct 30 14:24:17 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:24:17 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:24:17 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:24:17 ARCHER kernel: iwlwifi 0000:03:00.0: L1 Enabled - LTR Enabled
+Oct 30 14:24:17 ARCHER kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Oct 30 14:24:17 ARCHER kernel: ata3: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata3.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata3.00: configured for UDMA/133
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata1.00: supports DRM functions and may not be fully accessible
+Oct 30 14:24:17 ARCHER kernel: ata1.00: failed to get NCQ Send/Recv Log Emask 0x1
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/02:00:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Oct 30 14:24:17 ARCHER kernel: ata1.00: ACPI cmd ef/10:09:00:00:00:a0 (SET FEATURES) succeeded
+Oct 30 14:24:17 ARCHER kernel: ata1.00: supports DRM functions and may not be fully accessible
+Oct 30 14:24:17 ARCHER kernel: ata1.00: failed to get NCQ Send/Recv Log Emask 0x1
+Oct 30 14:24:17 ARCHER kernel: ata1.00: configured for UDMA/133
+Oct 30 14:24:17 ARCHER kernel: PM: resume of devices complete after 738.645 msecs
+Oct 30 14:24:17 ARCHER kernel: PM: Finishing wakeup.
+Oct 30 14:24:17 ARCHER kernel: Restarting tasks ... done.
+Oct 30 14:24:17 ARCHER systemd[1]: Time has been changed
+-- Subject: Time change
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system clock has been changed to REALTIME microseconds after January 1st, 1970.
+Oct 30 14:24:17 ARCHER systemd-logind[470]: Lid opened.
+Oct 30 14:24:17 ARCHER systemd[617]: Time has been changed
+-- Subject: Time change
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system clock has been changed to REALTIME microseconds after January 1st, 1970.
+Oct 30 14:24:17 ARCHER kernel: psmouse serio1: synaptics: queried max coordinates: x [..5676], y [..4758]
+Oct 30 14:24:17 ARCHER root[17803]: LID opened
+Oct 30 14:24:17 ARCHER systemd-sleep[17686]: System resumed.
+-- Subject: System sleep state suspend left
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system has now left the suspend sleep state.
+Oct 30 14:24:17 ARCHER systemd[1]: Started Suspend.
+-- Subject: Unit systemd-suspend.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-suspend.service has finished starting up.
+-- 
+-- The start-up result is done.
+Oct 30 14:24:17 ARCHER systemd[1]: sleep.target: Unit not needed anymore. Stopping.
+Oct 30 14:24:17 ARCHER systemd[1]: Stopped target Sleep.
+-- Subject: Unit sleep.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sleep.target has finished shutting down.
+Oct 30 14:24:17 ARCHER systemd[1]: Reached target Suspend.
+-- Subject: Unit suspend.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit suspend.target has finished starting up.
+-- 
+-- The start-up result is done.
+Oct 30 14:24:17 ARCHER systemd-logind[470]: Operation finished.
+Oct 30 14:24:17 ARCHER systemd[1]: suspend.target: Unit is bound to inactive unit systemd-suspend.service. Stopping, too.
+Oct 30 14:24:17 ARCHER systemd[1]: Stopped target Suspend.
+-- Subject: Unit suspend.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit suspend.target has finished shutting down.
+Oct 30 14:24:17 ARCHER dhcpcd[11401]: wlp3s0: deleting default route via 10.101.87.254
+Oct 30 14:24:17 ARCHER kernel: psmouse serio1: synaptics: queried min coordinates: x [1266..], y [1096..]
+Oct 30 14:24:17 ARCHER kernel: usb 1-3: new low-speed USB device number 12 using xhci_hcd
+Oct 30 14:24:18 ARCHER kernel: usb 1-3: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+Oct 30 14:24:18 ARCHER kernel: input: USB Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0/0003:1BCF:0005.0008/input/input26
+Oct 30 14:24:18 ARCHER mtp-probe[17815]: checking bus 1, device 12: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3"
+Oct 30 14:24:18 ARCHER mtp-probe[17815]: bus: 1, device: 12 was not an MTP device
+Oct 30 14:24:18 ARCHER kernel: hid-generic 0003:1BCF:0005.0008: input,hidraw0: USB HID v1.10 Mouse [USB Optical Mouse] on usb-0000:00:14.0-3/input0
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: authenticate with 1c:6a:7a:3e:c7:7d
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: send auth to 1c:6a:7a:3e:c7:7d (try 1/3)
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: authenticated
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: associate with 1c:6a:7a:3e:c7:7d (try 1/3)
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: RX AssocResp from 1c:6a:7a:3e:c7:7d (capab=0x1 status=0 aid=26)
+Oct 30 14:24:20 ARCHER dhcpcd[11401]: wlp3s0: carrier acquired
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: associated
+Oct 30 14:24:20 ARCHER dhcpcd[11401]: wlp3s0: IAID c5:c7:c3:ec
+Oct 30 14:24:20 ARCHER kernel: wlp3s0: Limiting TX power to 15 dBm as advertised by 1c:6a:7a:3e:c7:7d
+Oct 30 14:24:20 ARCHER dhcpcd[11401]: wlp3s0: rebinding lease of 10.101.84.111
+Oct 30 14:24:25 ARCHER dhcpcd[11401]: wlp3s0: probing static address 10.101.84.111/22
+Oct 30 14:24:29 ARCHER dhcpcd[11401]: wlp3s0: leased 10.101.84.111 for 3600 seconds
+Oct 30 14:24:29 ARCHER dhcpcd[11401]: wlp3s0: adding route to 10.101.84.0/22
+Oct 30 14:24:29 ARCHER dhcpcd[11401]: wlp3s0: adding default route via 10.101.87.254
+Oct 30 14:24:29 ARCHER dhcpcd[11401]: wlp3s0: removing route to 10.101.84.0/22
+

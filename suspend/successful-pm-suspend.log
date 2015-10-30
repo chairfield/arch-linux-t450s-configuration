@@ -1,0 +1,2767 @@
++ log 'Initial commandline parameters: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Initial commandline parameters: ' = -n ']'
++ printf '%s\n' 'Initial commandline parameters: '
+Initial commandline parameters: 
++ load_hook_blacklist
++ '[' '' ']'
++ return
++ load_hook_parameters
++ '[' '' ']'
++ '[' '' ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
+++ date
++ log 'Fri Oct 30 14:37:13 MDT 2015: Running hooks for suspend.'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Fri Oct 30 14:37:13 MDT 2015: Running hooks for suspend.' = -n ']'
++ printf '%s\n' 'Fri Oct 30 14:37:13 MDT 2015: Running hooks for suspend.'
+Fri Oct 30 14:37:13 MDT 2015: Running hooks for suspend.
++ run_hooks sleep 'suspend suspend'
++ _run_hooks sleep 'suspend suspend'
++ local syshooks=/etc/pm/sleep.d
++ local phooks=/usr/lib/pm-utils/sleep.d
++ command_exists before_hooks
++ type before_hooks
++ return 0
++ before_hooks
++ '[' -z '' ']'
++ return 0
++ local sort=sort
++ local base
++ local hook
++ local 'oifs= 	
+'
++ local 'nifs=
+'
++ IFS='
+'
++ '[' '' = reverse ']'
+++ IFS=' 	
+'
+++ sort
+++ uniq
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /etc/pm/sleep.d/90alsa ']'
+++ echo 90alsa
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/00logging ']'
+++ echo 00logging
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/00powersave ']'
+++ echo 00powersave
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/01grub ']'
+++ echo 01grub
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/49bluetooth ']'
+++ echo 49bluetooth
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/75modules ']'
+++ echo 75modules
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/90clock ']'
+++ echo 90clock
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/94cpufreq ']'
+++ echo 94cpufreq
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/95led ']'
+++ echo 95led
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
+++ echo 98video-quirk-db-handler
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/99video ']'
+++ echo 99video
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a '' ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/00logging ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/00logging ']'
++ hook=/usr/lib/pm-utils/sleep.d/00logging
++ run_hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/00logging suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/00logging
++ local hook=00logging
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:00logging ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:logging ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/00logging ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/00logging suspend suspend
++ case "$1" in
++ '[' -n /var/log/pm-suspend.log ']'
++ /bin/uname -a
+Linux ARCHER 4.2.3-1-ARCH #1 SMP PREEMPT Sat Oct 3 18:52:50 CEST 2015 x86_64 GNU/Linux
++ lsmod
+Module                  Size  Used by
+ctr                    16384  0
+ccm                    20480  0
+rfcomm                 61440  2
+joydev                 20480  0
+bnep                   20480  2
+snd_hda_codec_hdmi     49152  1
+snd_hda_codec_realtek    73728  1
+snd_hda_codec_generic    69632  1 snd_hda_codec_realtek
+arc4                   16384  2
+mousedev               20480  0
+iTCO_wdt               16384  0
+iTCO_vendor_support    16384  1 iTCO_wdt
+intel_rapl             20480  0
+nls_iso8859_1          16384  1
+iosf_mbi               16384  1 intel_rapl
+nls_cp437              20480  1
+x86_pkg_temp_thermal    16384  0
+intel_powerclamp       16384  0
+coretemp               16384  0
+kvm_intel             163840  0
+vfat                   20480  1
+i915                 1056768  6
+fat                    65536  1 vfat
+kvm                   446464  1 kvm_intel
+iwlmvm                229376  0
+mac80211              651264  1 iwlmvm
+evdev                  24576  27
+input_leds             16384  0
+uvcvideo               86016  0
+mac_hid                16384  0
+pcspkr                 16384  0
+videobuf2_vmalloc      16384  1 uvcvideo
+psmouse               118784  0
+serio_raw              16384  0
+videobuf2_memops       16384  1 videobuf2_vmalloc
+btusb                  40960  0
+drm_kms_helper        102400  1 i915
+rtsx_pci_ms            20480  0
+snd_hda_intel          32768  5
+iwlwifi               172032  1 iwlmvm
+videobuf2_core         40960  1 uvcvideo
+btrtl                  16384  1 btusb
+memstick               16384  1 rtsx_pci_ms
+v4l2_common            16384  1 videobuf2_core
+videodev              143360  3 uvcvideo,v4l2_common,videobuf2_core
+i2c_i801               20480  0
+snd_hda_codec         106496  4 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_intel
+snd_hda_core           49152  5 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel
+btbcm                  16384  1 btusb
+thinkpad_acpi          69632  1
+btintel                16384  1 btusb
+bluetooth             446464  29 bnep,btbcm,btrtl,btusb,rfcomm,btintel
+media                  20480  2 uvcvideo,videodev
+nvram                  16384  1 thinkpad_acpi
+led_class              16384  3 iwlmvm,thinkpad_acpi,input_leds
+hid_generic            16384  0
+cfg80211              466944  3 iwlwifi,mac80211,iwlmvm
+drm                   286720  6 i915,drm_kms_helper
+e1000e                217088  0
+rfkill                 20480  6 cfg80211,thinkpad_acpi,bluetooth
+snd_hwdep              16384  1 snd_hda_codec
+mei_me                 24576  0
+tpm_tis                20480  0
+wmi                    20480  0
+intel_gtt              20480  1 i915
+snd_pcm                86016  4 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_core
+tpm                    32768  1 tpm_tis
+battery                20480  0
+ptp                    20480  1 e1000e
+ac                     16384  0
+mei                    77824  1 mei_me
+i2c_algo_bit           16384  1 i915
+video                  32768  2 i915,thinkpad_acpi
+snd_timer              28672  1 snd_pcm
+shpchp                 32768  0
+snd                    65536  19 snd_hda_codec_realtek,snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel,thinkpad_acpi
+soundcore              16384  1 snd
+pps_core               20480  1 ptp
+lpc_ich                24576  0
+thermal                20480  0
+button                 16384  1 i915
+processor              32768  0
+sch_fq_codel           20480  5
+nfs                   204800  0
+lockd                  90112  1 nfs
+grace                  16384  1 lockd
+sunrpc                274432  2 nfs,lockd
+fscache                57344  1 nfs
+ip_tables              28672  0
+x_tables               28672  1 ip_tables
+ext4                  507904  4
+crc16                  16384  2 ext4,bluetooth
+mbcache                20480  1 ext4
+jbd2                   90112  1 ext4
+sha256_ssse3           28672  1
+sha256_generic         24576  1 sha256_ssse3
+hmac                   16384  1
+drbg                   32768  1
+ansi_cprng             16384  0
+algif_skcipher         20480  0
+af_alg                 16384  1 algif_skcipher
+usbhid                 45056  0
+hid                   114688  2 hid_generic,usbhid
+dm_crypt               28672  1
+dm_mod                102400  19 dm_crypt
+sd_mod                 36864  3
+rtsx_pci_sdmmc         24576  0
+mmc_core              110592  1 rtsx_pci_sdmmc
+atkbd                  24576  0
+libps2                 16384  2 atkbd,psmouse
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+crc32c_intel           24576  0
+ghash_clmulni_intel    16384  0
+aesni_intel           167936  2
+aes_x86_64             20480  1 aesni_intel
+lrw                    16384  1 aesni_intel
+gf128mul               16384  1 lrw
+glue_helper            16384  1 aesni_intel
+ablk_helper            16384  1 aesni_intel
+ahci                   36864  2
+cryptd                 20480  4 ghash_clmulni_intel,aesni_intel,ablk_helper
+libahci                28672  1 ahci
+libata                196608  2 ahci,libahci
+xhci_pci               16384  0
+ehci_pci               16384  0
+scsi_mod              147456  2 libata,sd_mod
+ehci_hcd               69632  1 ehci_pci
+xhci_hcd              155648  1 xhci_pci
+rtsx_pci               45056  2 rtsx_pci_ms,rtsx_pci_sdmmc
+usbcore               196608  7 btusb,uvcvideo,ehci_hcd,ehci_pci,usbhid,xhci_hcd,xhci_pci
+usb_common             16384  1 usbcore
+i8042                  24576  1 libps2
+serio                  20480  7 serio_raw,atkbd,i8042,psmouse
++ free
+              total        used        free      shared  buff/cache   available
+Mem:        8078692     1557380     4160120      260864     2361192     6185280
+Swap:       8388604           0     8388604
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/00logging suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/00logging suspend suspend: '
+/usr/lib/pm-utils/sleep.d/00logging suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=00logging
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 00logging ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/00powersave ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/00powersave ']'
++ hook=/usr/lib/pm-utils/sleep.d/00powersave
++ run_hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/00powersave suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/00powersave
++ local hook=00powersave
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:00powersave ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:powersave ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/00powersave ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/00powersave suspend suspend
++ command_exists pm-powersave
++ type pm-powersave
++ return 0
++ case $1 in
++ pm-powersave false
+++ set -a
+++ PM_UTILS_LIBDIR=/usr/lib/pm-utils
+++ PM_UTILS_ETCDIR=/etc/pm
+++ PM_UTILS_RUNDIR=/var/run/pm-utils
+++ PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/lib/pm-utils/bin
+++ PM_LOGFILE=/var/log/pm-powersave.log
+++ TEMPORARY_CPUFREQ_GOVERNOR=performance
+++ LOCKDIR=/var/run/pm-utils/locks
+++ STORAGEDIR=/var/run/pm-utils/pm-powersave/storage
+++ NA=254
+++ NX=253
+++ DX=252
+++ PM_FUNCTIONS=/usr/lib/pm-utils/functions
+++ PM_QUIRKDB=/usr/lib/pm-utils/video-quirks
+++ PM_LKW_QUIRKS=/etc/pm/last_known_working.quirkdb
+++ LC_COLLATE=C
+++ HIBERNATE_MODE=
+++ HIBERNATE_RESUME_POST_VIDEO=no
+++ SLEEP_MODULE=auto
+++ SUSPEND_MODULES=
+++ HOOK_BLACKLIST=
+++ ADD_PARAMETERS=
+++ DROP_PARAMETERS=
+++ PARAMETERS=/var/run/pm-utils/pm-powersave/storage/parameters
+++ INHIBIT=/var/run/pm-utils/pm-powersave/storage/inhibit
+++ PM_CMDLINE=false
+++ BEFORE_HOOKS=
+++ MODULE_HELP=
+++ SUSPEND_MODULE=
+++ HIBERNATE_MODULE=
+++ SUSPEND_HYBRID_MODULE=
+++ PM_HIBERNATE_DELAY=900
+++ PM_RTC=/sys/class/rtc/rtc0
+++ '[' -f /usr/lib/pm-utils/defaults ']'
+++ . /usr/lib/pm-utils/defaults
+++ '[' -f /usr/lib/pm-utils/pm-powersave.defaults ']'
+++ set +a
+++ for cfg in '"${PM_UTILS_ETCDIR}"/config.d/*[!~]' '"${PM_UTILS_ETCDIR}/${STASHNAME}.config.d"/*[!~]'
+++ '[' -f '/etc/pm/config.d/*[!~]' ']'
+++ continue
+++ for cfg in '"${PM_UTILS_ETCDIR}"/config.d/*[!~]' '"${PM_UTILS_ETCDIR}/${STASHNAME}.config.d"/*[!~]'
+++ '[' -f '/etc/pm/pm-powersave.config.d/*[!~]' ']'
+++ continue
+++ . /usr/lib/pm-utils/functions
++++ is_set true
++++ case ${1-UNSET} in
++++ return 0
++++ set -x
+++ profiling
+++ '[' '' = true ']'
+++ profiling
+++ '[' '' = true ']'
+++ profiling
+++ '[' '' = true ']'
+++ '[' auto = auto ']'
+++ SLEEP_MODULE='tuxonice uswsusp'
+++ for mod in '$SLEEP_MODULE'
+++ mod=/usr/lib/pm-utils/module.d/tuxonice
+++ '[' -f /usr/lib/pm-utils/module.d/tuxonice ']'
+++ . /usr/lib/pm-utils/module.d/tuxonice
++++ export TUXONICE_LOC
++++ for loc in '"/sys/power/tuxonice"' '"/sys/power/suspend2"'
++++ '[' -d /sys/power/tuxonice ']'
++++ for loc in '"/sys/power/tuxonice"' '"/sys/power/suspend2"'
++++ '[' -d /sys/power/suspend2 ']'
++++ '[' -n '' ']'
++++ '[' -z '' -a -n '' ']'
++++ '[' -z '' -a -n '' ']'
+++ for mod in '$SLEEP_MODULE'
+++ mod=/usr/lib/pm-utils/module.d/uswsusp
+++ '[' -f /usr/lib/pm-utils/module.d/uswsusp ']'
+++ . /usr/lib/pm-utils/module.d/uswsusp
++++ '[' -z '' ']'
++++ command_exists s2ram
++++ type s2ram
++++ return 1
++++ '[' -z '' ']'
++++ '[' -f /sys/power/disk ']'
++++ grep -q disk /sys/power/state
++++ '[' -c /dev/snapshot ']'
++++ command_exists s2disk
++++ type s2disk
++++ return 1
++++ '[' -z '' ']'
++++ grep -q mem /sys/power/state
++++ command_exists s2both
++++ type s2both
++++ return 1
+++ '[' -z '' ']'
+++ grep -q mem /sys/power/state
+++ SUSPEND_MODULE=kernel
+++ '[' -z '' ']'
+++ '[' -f /sys/power/disk ']'
+++ grep -q disk /sys/power/state
+++ HIBERNATE_MODULE=kernel
+++ '[' -z '' -a -w /sys/class/rtc/rtc0/wakealarm ']'
+++ check_suspend
+++ '[' -n kernel ']'
+++ check_hibernate
+++ '[' -n kernel ']'
+++ is_set no
+++ case ${1-UNSET} in
+++ return 1
+++ SUSPEND_HYBRID_MODULE=kernel
++ case $1 in
++ lock_and_load
++ try_lock pm-powersave.lock
++ local lock=/var/run/pm-utils/locks/pm-powersave.lock
++ mkdir -p /var/run/pm-utils/locks
++ touch /var/run/pm-utils/locks/pm-powersave.lock
++ exec
++ flock -x -n 3
++ return 0
++ trap remove_powersave_lock 0
++ mkdir -p /var/run/pm-utils/pm-powersave/storage
++ rm -f /var/run/pm-utils/pm-powersave/storage/inhibit
++ load_hook_blacklist
++ '[' '' ']'
++ return
++ init_logfile /var/log/pm-powersave.log
++ '[' -z /var/log/pm-powersave.log ']'
++ '[' -h /var/log/pm-powersave.log ']'
++ '[' -f /var/log/pm-powersave.log -a '!' -O /var/log/pm-powersave.log ']'
++ export LOGGING=true
++ LOGGING=true
++ exec
++ exit 0
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/00powersave suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/00powersave suspend suspend: '
+/usr/lib/pm-utils/sleep.d/00powersave suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=00powersave
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 00powersave ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/01grub ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/01grub ']'
++ hook=/usr/lib/pm-utils/sleep.d/01grub
++ run_hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/01grub suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/01grub
++ local hook=01grub
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:01grub ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:grub ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/01grub ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/01grub suspend suspend
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/01grub suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/01grub suspend suspend: '
+/usr/lib/pm-utils/sleep.d/01grub suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=01grub
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 01grub ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/49bluetooth ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/49bluetooth ']'
++ hook=/usr/lib/pm-utils/sleep.d/49bluetooth
++ run_hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/49bluetooth
++ local hook=49bluetooth
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:49bluetooth ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:bluetooth ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/49bluetooth ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend
++ '[' -f /proc/acpi/ibm/bluetooth ']'
++ case "$1" in
++ suspend_bluetooth
++ grep -q enabled /proc/acpi/ibm/bluetooth
++ savestate ibm_bluetooth enable
++ '[' -n enable ']'
++ echo enable
++ echo disable
++ TIMEOUT=20
++ '[' 20 -ge 0 ']'
+++ cat /sys/module/btusb/refcnt
++ '[' 0 = 0 ']'
++ break
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend: '
+/usr/lib/pm-utils/sleep.d/49bluetooth suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=49bluetooth
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 49bluetooth ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/75modules ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/75modules ']'
++ hook=/usr/lib/pm-utils/sleep.d/75modules
++ run_hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/75modules suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/75modules
++ local hook=75modules
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:75modules ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:modules ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/75modules ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/75modules suspend suspend
++ case "$1" in
++ suspend_modules
++ '[' -z '' ']'
++ return 254
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/75modules suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/75modules suspend suspend: '
+/usr/lib/pm-utils/sleep.d/75modules suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=75modules
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 75modules ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/90alsa ']'
++ hook=/etc/pm/sleep.d/90alsa
++ run_hook /etc/pm/sleep.d/90alsa suspend suspend
++ _run_hook /etc/pm/sleep.d/90alsa suspend suspend
++ log 'Running hook /etc/pm/sleep.d/90alsa suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /etc/pm/sleep.d/90alsa suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /etc/pm/sleep.d/90alsa suspend suspend:'
+Running hook /etc/pm/sleep.d/90alsa suspend suspend:
++ hook_ok /etc/pm/sleep.d/90alsa
++ local hook=90alsa
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:90alsa ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:alsa ']'
++ '[' -x /etc/pm/sleep.d/90alsa ']'
++ return 0
++ /etc/pm/sleep.d/90alsa suspend suspend
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/etc/pm/sleep.d/90alsa suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/etc/pm/sleep.d/90alsa suspend suspend: '
+/etc/pm/sleep.d/90alsa suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=90alsa
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 90alsa ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/90clock ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/90clock ']'
++ hook=/usr/lib/pm-utils/sleep.d/90clock
++ run_hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/90clock suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/90clock
++ local hook=90clock
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:90clock ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:clock ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/90clock ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/90clock suspend suspend
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ exit 254
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/90clock suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/90clock suspend suspend: '
+/usr/lib/pm-utils/sleep.d/90clock suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=90clock
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 90clock ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/94cpufreq ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/94cpufreq ']'
++ hook=/usr/lib/pm-utils/sleep.d/94cpufreq
++ run_hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/94cpufreq
++ local hook=94cpufreq
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:94cpufreq ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:cpufreq ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/94cpufreq ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend
++ '[' -d /sys/devices/system/cpu/ ']'
++ case "$1" in
++ hibernate_cpufreq
++ cd /sys/devices/system/cpu/
++ for x in 'cpu[0-9]*'
++ '[' -L cpu0/cpufreq ']'
++ gov=cpu0/cpufreq/scaling_governor
++ '[' -f cpu0/cpufreq/scaling_governor ']'
++ grep -q performance cpu0/cpufreq/scaling_available_governors
++ savestate cpu0_governor
++ '[' -n '' ']'
++ cat
++ echo performance
++ for x in 'cpu[0-9]*'
++ '[' -L cpu1/cpufreq ']'
++ gov=cpu1/cpufreq/scaling_governor
++ '[' -f cpu1/cpufreq/scaling_governor ']'
++ grep -q performance cpu1/cpufreq/scaling_available_governors
++ savestate cpu1_governor
++ '[' -n '' ']'
++ cat
++ echo performance
++ for x in 'cpu[0-9]*'
++ '[' -L cpu2/cpufreq ']'
++ gov=cpu2/cpufreq/scaling_governor
++ '[' -f cpu2/cpufreq/scaling_governor ']'
++ grep -q performance cpu2/cpufreq/scaling_available_governors
++ savestate cpu2_governor
++ '[' -n '' ']'
++ cat
++ echo performance
++ for x in 'cpu[0-9]*'
++ '[' -L cpu3/cpufreq ']'
++ gov=cpu3/cpufreq/scaling_governor
++ '[' -f cpu3/cpufreq/scaling_governor ']'
++ grep -q performance cpu3/cpufreq/scaling_available_governors
++ savestate cpu3_governor
++ '[' -n '' ']'
++ cat
++ echo performance
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend: '
+/usr/lib/pm-utils/sleep.d/94cpufreq suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=94cpufreq
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 94cpufreq ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/95led ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/95led ']'
++ hook=/usr/lib/pm-utils/sleep.d/95led
++ run_hook /usr/lib/pm-utils/sleep.d/95led suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/95led suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/95led suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/95led suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/95led suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/95led suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/95led
++ local hook=95led
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:95led ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:led ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/95led ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/95led suspend suspend
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/95led suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/95led suspend suspend: '
+/usr/lib/pm-utils/sleep.d/95led suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=95led
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 95led ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/98video-quirk-db-handler ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
++ hook=/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler
++ run_hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler
++ local hook=98video-quirk-db-handler
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:98video-quirk-db-handler ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:video-quirk-db-handler ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend
++ [[ -n true ]]
++ export 'PS4=${BASH_SOURCE}@${LINENO}(${FUNCNAME[0]}): '
++ PS4='${BASH_SOURCE}@${LINENO}(${FUNCNAME[0]}): '
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@10(main): set -x
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@25(main): possible_video_quirks=' --quirk-dpms-on
+	   --quirk-dpms-suspend
+	   --quirk-s3-mode
+	   --quirk-s3-bios
+	   --quirk-vbe-post
+	   --quirk-vbe-post
+	   --quirk-vga-mode-3
+	   --quirk-vbemode-restore
+	   --quirk-vbestate-restore
+	   --quirk-reset-brightness
+	   --quirk-radeon-off
+	   --quirk-no-fb
+	   --quirk-save-pci'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@40(main): possible_system_properties='system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@343(main): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@347(main): precache_dmivars
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@170(precache_dmivars): local p q f
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.firmware.version
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.firmware.version* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_firmware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_firmware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.firmware.version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@107(dmisysget): _dmisysget bios_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/bios_version ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES='JBET51WW (1.16 )'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES='JBET51WW (1.16 )'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_firmware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.firmware.vendor
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.vendor =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.firmware.vendor* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_firmware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_firmware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.firmware.vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@106(dmisysget): _dmisysget bios_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/bios_vendor ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_firmware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.firmware.release_date
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.release_date =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.firmware.release_date* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_firmware_release_date
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_firmware_release_date
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.firmware.release_date
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@108(dmisysget): _dmisysget bios_date
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/bios_date ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=07/08/2015
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=07/08/2015
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_firmware_release_date
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.vendor
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.vendor =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.vendor* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@109(dmisysget): _dmisysget sys_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/sys_vendor ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.product
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.product =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.product* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@110(dmisysget): _dmisysget product_name
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/product_name ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=20BXCTO1WW
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=20BXCTO1WW
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.version
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.version =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.version* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@111(dmisysget): _dmisysget product_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/product_version ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES='ThinkPad T450s'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES='ThinkPad T450s'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.board.product
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.board.product =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.board.product* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_board_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_board_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.board.product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@112(dmisysget): _dmisysget board_name
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/board_name ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=20BXCTO1WW
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=20BXCTO1WW
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_board_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.board.version
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.board.version =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.board.version* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_board_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_board_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.board.version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@113(dmisysget): _dmisysget board_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/board_version ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES='SDK0E50512 STD'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES='SDK0E50512 STD'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_board_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.board.vendor
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.board.vendor =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.board.vendor* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_board_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_board_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.board.vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@114(dmisysget): _dmisysget board_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@100(_dmisysget): [[ -r /sys/class/dmi/id/board_vendor ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@101(_dmisysget): read RES
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=LENOVO
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_board_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.primary_video.vendor
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.primary_video.vendor =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.primary_video.vendor* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_primary_video_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_primary_video_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.primary_video.vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@115(dmisysget): videoget vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@65(videoget): local dev pci
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@66(videoget): pci=/sys/bus/pci/devices
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:00.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:00.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x060000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): continue
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:02.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:02.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x030000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@70(videoget): case $1 in
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@71(videoget): cat /sys/bus/pci/devices/0000:00:02.0/vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@71(videoget): RES=0x8086
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@91(videoget): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=0x8086
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=0x8086
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_primary_video_vendor
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.primary_video.product
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.primary_video.product =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.primary_video.product* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_primary_video_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_primary_video_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.primary_video.product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@116(dmisysget): videoget device
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@65(videoget): local dev pci
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@66(videoget): pci=/sys/bus/pci/devices
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:00.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:00.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x060000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): continue
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:02.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:02.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x030000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@70(videoget): case $1 in
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@72(videoget): cat /sys/bus/pci/devices/0000:00:02.0/device
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@72(videoget): RES=0x1616
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@91(videoget): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=0x1616
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=0x1616
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_primary_video_product
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.primary_video.driver
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.primary_video.driver =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.primary_video.driver* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_primary_video_driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_primary_video_driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.primary_video.driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@117(dmisysget): videoget driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@65(videoget): local dev pci
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@66(videoget): pci=/sys/bus/pci/devices
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:00.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:00.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x060000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): continue
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:02.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:02.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x030000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@70(videoget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@74(videoget): [[ -L /sys/bus/pci/devices/0000:00:02.0/driver ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@75(videoget): readlink /sys/bus/pci/devices/0000:00:02.0/driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@75(videoget): RES=../../../bus/pci/drivers/i915
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@76(videoget): RES=i915
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@91(videoget): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=i915
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=i915
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_primary_video_driver
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.hardware.primary_video.using_kms
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.hardware.primary_video.using_kms =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.hardware.primary_video.using_kms* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_hardware_primary_video_using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_hardware_primary_video_using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.hardware.primary_video.using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@118(dmisysget): videoget using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@65(videoget): local dev pci
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@66(videoget): pci=/sys/bus/pci/devices
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:00.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:00.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x060000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): continue
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@67(videoget): for dev in '"$pci"/*'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@68(videoget): [[ -f /sys/bus/pci/devices/0000:00:02.0/class ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): cat /sys/bus/pci/devices/0000:00:02.0/class
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@69(videoget): [[ 0x030000 = \0\x\0\3\0\0\0\0 ]]
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@70(videoget): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@84(videoget): using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@60(using_kms): grep -q -E '(nouveau|drm)fb' /proc/fb
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@85(videoget): RES=true
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@91(videoget): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=true
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=true
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_hardware_primary_video_using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@171(precache_dmivars): for q in '$possible_system_properties'
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): canonicalize_dmivar system.kernel.version
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.kernel.version =~ ^[a-z._-]+$ ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@163(canonicalize_dmivar): [[ system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version = *system.kernel.version* ]]
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@164(canonicalize_dmivar): echo system_kernel_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@172(precache_dmivars): p=system_kernel_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@173(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@174(precache_dmivars): for f in dmisysget halget dmidecodeget
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): dmisysget system.kernel.version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@105(dmisysget): case $1 in
+//usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@119(dmisysget): uname -r
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@119(dmisysget): RES=4.2.3-1-ARCH
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@175(precache_dmivars): break
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@177(precache_dmivars): RES=4.2.3-1-ARCH
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@178(precache_dmivars): RES=4.2.3-1-ARCH
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@179(precache_dmivars): read system_kernel_version
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@181(precache_dmivars): RES=
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@352(main): has_parameter --quirk-test
+//usr/lib/pm-utils/functions@240(has_parameter): get_parameters
+//usr/lib/pm-utils/functions@234(get_parameters): cat /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/functions@243(has_parameter): return 1
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@358(main): using_kms
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@60(using_kms): grep -q -E '(nouveau|drm)fb' /proc/fb
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@360(main): remove_parameters --quirk-dpms-on --quirk-dpms-suspend --quirk-s3-mode --quirk-s3-bios --quirk-vbe-post --quirk-vbe-post --quirk-vga-mode-3 --quirk-vbemode-restore --quirk-vbestate-restore --quirk-reset-brightness --quirk-radeon-off --quirk-no-fb --quirk-save-pci
+/usr/lib/pm-utils/functions@210(remove_parameters): local p
+/usr/lib/pm-utils/functions@211(remove_parameters): '[' --quirk-dpms-on = all ']'
+/usr/lib/pm-utils/functions@214(remove_parameters): echo ''
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-dpms-on
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-dpms-suspend
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-s3-mode
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-s3-bios
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-vbe-post
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-vbe-post
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-vga-mode-3
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-vbemode-restore
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-vbestate-restore
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-reset-brightness
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-radeon-off
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-no-fb
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-save-pci
+/usr/lib/pm-utils/functions@219(remove_parameters): grep -vxFf /var/run/pm-utils/pm-suspend/storage/parameters.rm /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/functions@221(remove_parameters): cp -f /var/run/pm-utils/pm-suspend/storage/parameters.new /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@361(main): add_parameters --quirk-no-chvt
+/usr/lib/pm-utils/functions@226(add_parameters): remove_parameters --quirk-no-chvt
+/usr/lib/pm-utils/functions@210(remove_parameters): local p
+/usr/lib/pm-utils/functions@211(remove_parameters): '[' --quirk-no-chvt = all ']'
+/usr/lib/pm-utils/functions@214(remove_parameters): echo ''
+/usr/lib/pm-utils/functions@215(remove_parameters): for p in '"$@"'
+/usr/lib/pm-utils/functions@216(remove_parameters): echo --quirk-no-chvt
+/usr/lib/pm-utils/functions@219(remove_parameters): grep -vxFf /var/run/pm-utils/pm-suspend/storage/parameters.rm /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/functions@221(remove_parameters): cp -f /var/run/pm-utils/pm-suspend/storage/parameters.new /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/functions@227(add_parameters): for x in '"$@"'
+/usr/lib/pm-utils/functions@228(add_parameters): echo --quirk-no-chvt
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@362(main): echo 'Kernel modesetting video driver detected, not using quirks.'
+Kernel modesetting video driver detected, not using quirks.
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend: '
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=98video-quirk-db-handler
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' '' -a '' = reverse -a 98video-quirk-db-handler ']'
++ '[' '!' '' ']'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
+++ get_parameters
+++ cat /var/run/pm-utils/pm-suspend/storage/parameters
++ export PM_CMDLINE=--quirk-no-chvt
++ PM_CMDLINE=--quirk-no-chvt
++ rm -f /var/run/pm-utils/pm-suspend/storage/parameters.new
++ '[' -f /etc/pm/sleep.d/99video ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/99video ']'
++ hook=/usr/lib/pm-utils/sleep.d/99video
++ run_hook /usr/lib/pm-utils/sleep.d/99video suspend suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/99video suspend suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/99video suspend suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/99video suspend suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/99video suspend suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/99video suspend suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/99video
++ local hook=99video
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:99video ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:video ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/99video ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/99video suspend suspend
++ for opt in '$PM_CMDLINE'
++ case "${opt##--quirk-}" in
++ QUIRK_NO_CHVT=true
++ command_exists vbetool
++ type vbetool
++ return 1
++ command_exists radeontool
++ type radeontool
++ return 1
++ case "$1" in
++ maybe_chvt
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ return
++ suspend_video
++ local acpi_flag=0
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ sysctl -w kernel.acpi_video_flags=0
+kernel.acpi_video_flags = 0
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ save_fbcon
++ local con
++ for con in '/sys/class/graphics/*/state'
++ '[' -f /sys/class/graphics/fb0/state ']'
++ echo 1
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/99video suspend suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/99video suspend suspend: '
+/usr/lib/pm-utils/sleep.d/99video suspend suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=99video
++ IFS='
+'
++ IFS=' 	
+'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ return 0
+++ date
++ log 'Fri Oct 30 14:37:13 MDT 2015: performing suspend'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Fri Oct 30 14:37:13 MDT 2015: performing suspend' = -n ']'
++ printf '%s\n' 'Fri Oct 30 14:37:13 MDT 2015: performing suspend'
+Fri Oct 30 14:37:13 MDT 2015: performing suspend
++ sync
++ do_suspend
++ echo -n mem
+++ date
++ log 'Fri Oct 30 14:37:31 MDT 2015: Awake.'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Fri Oct 30 14:37:31 MDT 2015: Awake.' = -n ']'
++ printf '%s\n' 'Fri Oct 30 14:37:31 MDT 2015: Awake.'
+Fri Oct 30 14:37:31 MDT 2015: Awake.
+++ date
++ log 'Fri Oct 30 14:37:31 MDT 2015: Running hooks for resume'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Fri Oct 30 14:37:31 MDT 2015: Running hooks for resume' = -n ']'
++ printf '%s\n' 'Fri Oct 30 14:37:31 MDT 2015: Running hooks for resume'
+Fri Oct 30 14:37:31 MDT 2015: Running hooks for resume
++ run_hooks sleep 'resume suspend' reverse
++ _run_hooks sleep 'resume suspend' reverse
++ local syshooks=/etc/pm/sleep.d
++ local phooks=/usr/lib/pm-utils/sleep.d
++ command_exists before_hooks
++ type before_hooks
++ return 0
++ before_hooks
++ '[' -z '' ']'
++ return 0
++ local sort=sort
++ local base
++ local hook
++ local 'oifs= 	
+'
++ local 'nifs=
+'
++ IFS='
+'
++ '[' reverse = reverse ']'
++ sort='sort -r'
+++ IFS=' 	
+'
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /etc/pm/sleep.d/90alsa ']'
+++ uniq
+++ echo 90alsa
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/00logging ']'
+++ echo 00logging
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/00powersave ']'
+++ echo 00powersave
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/01grub ']'
+++ echo 01grub
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/49bluetooth ']'
+++ echo 49bluetooth
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/75modules ']'
+++ echo 75modules
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ sort -r
+++ '[' -O /usr/lib/pm-utils/sleep.d/90clock ']'
+++ echo 90clock
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/94cpufreq ']'
+++ echo 94cpufreq
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/95led ']'
+++ echo 95led
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
+++ echo 98video-quirk-db-handler
+++ for f in '"$syshooks/"*[!~]' '"$phooks/"*[!~]'
+++ '[' -O /usr/lib/pm-utils/sleep.d/99video ']'
+++ echo 99video
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 99video ']'
++ '[' 99video '>' 99video ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/99video ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/99video ']'
++ hook=/usr/lib/pm-utils/sleep.d/99video
++ run_hook /usr/lib/pm-utils/sleep.d/99video resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/99video resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/99video resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/99video resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/99video resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/99video resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/99video
++ local hook=99video
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:99video ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:video ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/99video ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/99video resume suspend
++ for opt in '$PM_CMDLINE'
++ case "${opt##--quirk-}" in
++ QUIRK_NO_CHVT=true
++ command_exists vbetool
++ type vbetool
++ return 1
++ command_exists radeontool
++ type radeontool
++ return 1
++ case "$1" in
++ resume_video
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ resume_fbcon
++ local con
++ for con in '/sys/class/graphics/*/state'
++ '[' -f /sys/class/graphics/fb0/state ']'
++ echo 0
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ quirk ''
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ return 0
++ maybe_deallocvt
++ state_exists console
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:console ']'
++ return 0
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/99video resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/99video resume suspend: '
+/usr/lib/pm-utils/sleep.d/99video resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=99video
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 99video ']'
++ '[' 98video-quirk-db-handler '>' 99video ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/98video-quirk-db-handler ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
++ hook=/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler
++ run_hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler
++ local hook=98video-quirk-db-handler
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:98video-quirk-db-handler ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:video-quirk-db-handler ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend
++ [[ -n true ]]
++ export 'PS4=${BASH_SOURCE}@${LINENO}(${FUNCNAME[0]}): '
++ PS4='${BASH_SOURCE}@${LINENO}(${FUNCNAME[0]}): '
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@10(main): set -x
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@25(main): possible_video_quirks=' --quirk-dpms-on
+	   --quirk-dpms-suspend
+	   --quirk-s3-mode
+	   --quirk-s3-bios
+	   --quirk-vbe-post
+	   --quirk-vbe-post
+	   --quirk-vga-mode-3
+	   --quirk-vbemode-restore
+	   --quirk-vbestate-restore
+	   --quirk-reset-brightness
+	   --quirk-radeon-off
+	   --quirk-no-fb
+	   --quirk-save-pci'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@40(main): possible_system_properties='system.firmware.version 
+        system.firmware.vendor
+	system.firmware.release_date
+        system.hardware.vendor
+	system.hardware.product 
+        system.hardware.version
+	system.board.product 
+        system.board.version 
+        system.board.vendor
+	system.hardware.primary_video.vendor
+	system.hardware.primary_video.product
+	system.hardware.primary_video.driver
+	system.hardware.primary_video.using_kms
+	system.kernel.version'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@343(main): case $1 in
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@436(main): state_exists video_quirks
+/usr/lib/pm-utils/functions@184(state_exists): '[' -O /var/run/pm-utils/pm-suspend/storage/state:video_quirks ']'
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler@440(main): has_parameter --store-quirks-as-lkw
+//usr/lib/pm-utils/functions@240(has_parameter): get_parameters
+//usr/lib/pm-utils/functions@234(get_parameters): cat /var/run/pm-utils/pm-suspend/storage/parameters
+/usr/lib/pm-utils/functions@240(has_parameter): for p in '$(get_parameters)'
+/usr/lib/pm-utils/functions@241(has_parameter): '[' --quirk-no-chvt = --store-quirks-as-lkw ']'
+/usr/lib/pm-utils/functions@243(has_parameter): return 1
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend: '
+/usr/lib/pm-utils/sleep.d/98video-quirk-db-handler resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=98video-quirk-db-handler
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 98video-quirk-db-handler ']'
++ '[' 95led '>' 98video-quirk-db-handler ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/95led ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/95led ']'
++ hook=/usr/lib/pm-utils/sleep.d/95led
++ run_hook /usr/lib/pm-utils/sleep.d/95led resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/95led resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/95led resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/95led resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/95led resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/95led resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/95led
++ local hook=95led
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:95led ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:led ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/95led ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/95led resume suspend
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/95led resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/95led resume suspend: '
+/usr/lib/pm-utils/sleep.d/95led resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=95led
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 95led ']'
++ '[' 94cpufreq '>' 95led ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/94cpufreq ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/94cpufreq ']'
++ hook=/usr/lib/pm-utils/sleep.d/94cpufreq
++ run_hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/94cpufreq
++ local hook=94cpufreq
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:94cpufreq ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:cpufreq ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/94cpufreq ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/94cpufreq resume suspend
++ '[' -d /sys/devices/system/cpu/ ']'
++ case "$1" in
++ thaw_cpufreq
++ cd /sys/devices/system/cpu/
++ for x in 'cpu[0-9]*/cpufreq/scaling_governor'
++ '[' -f cpu0/cpufreq/scaling_governor ']'
++ state_exists cpu0_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu0_governor ']'
++ restorestate cpu0_governor
++ state_exists cpu0_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu0_governor ']'
++ cat /var/run/pm-utils/pm-suspend/storage/state:cpu0_governor
++ for x in 'cpu[0-9]*/cpufreq/scaling_governor'
++ '[' -f cpu1/cpufreq/scaling_governor ']'
++ state_exists cpu1_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu1_governor ']'
++ restorestate cpu1_governor
++ state_exists cpu1_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu1_governor ']'
++ cat /var/run/pm-utils/pm-suspend/storage/state:cpu1_governor
++ for x in 'cpu[0-9]*/cpufreq/scaling_governor'
++ '[' -f cpu2/cpufreq/scaling_governor ']'
++ state_exists cpu2_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu2_governor ']'
++ restorestate cpu2_governor
++ state_exists cpu2_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu2_governor ']'
++ cat /var/run/pm-utils/pm-suspend/storage/state:cpu2_governor
++ for x in 'cpu[0-9]*/cpufreq/scaling_governor'
++ '[' -f cpu3/cpufreq/scaling_governor ']'
++ state_exists cpu3_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu3_governor ']'
++ restorestate cpu3_governor
++ state_exists cpu3_governor
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:cpu3_governor ']'
++ cat /var/run/pm-utils/pm-suspend/storage/state:cpu3_governor
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/94cpufreq resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/94cpufreq resume suspend: '
+/usr/lib/pm-utils/sleep.d/94cpufreq resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=94cpufreq
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 94cpufreq ']'
++ '[' 90clock '>' 94cpufreq ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/90clock ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/90clock ']'
++ hook=/usr/lib/pm-utils/sleep.d/90clock
++ run_hook /usr/lib/pm-utils/sleep.d/90clock resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/90clock resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/90clock resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/90clock resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/90clock resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/90clock resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/90clock
++ local hook=90clock
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:90clock ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:clock ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/90clock ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/90clock resume suspend
++ is_set ''
++ case ${1-UNSET} in
++ return 2
++ exit 254
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/90clock resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/90clock resume suspend: '
+/usr/lib/pm-utils/sleep.d/90clock resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=90clock
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 90clock ']'
++ '[' 90alsa '>' 90clock ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/90alsa ']'
++ hook=/etc/pm/sleep.d/90alsa
++ run_hook /etc/pm/sleep.d/90alsa resume suspend
++ _run_hook /etc/pm/sleep.d/90alsa resume suspend
++ log 'Running hook /etc/pm/sleep.d/90alsa resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /etc/pm/sleep.d/90alsa resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /etc/pm/sleep.d/90alsa resume suspend:'
+Running hook /etc/pm/sleep.d/90alsa resume suspend:
++ hook_ok /etc/pm/sleep.d/90alsa
++ local hook=90alsa
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:90alsa ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:alsa ']'
++ '[' -x /etc/pm/sleep.d/90alsa ']'
++ return 0
++ /etc/pm/sleep.d/90alsa resume suspend
+ALSA lib pcm_dmix.c:1024:(snd_pcm_dmix_open) unable to open slave
+aplay: main:722: audio open error: No such file or directory
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/etc/pm/sleep.d/90alsa resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/etc/pm/sleep.d/90alsa resume suspend: '
+/etc/pm/sleep.d/90alsa resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=90alsa
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 90alsa ']'
++ '[' 75modules '>' 90alsa ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/75modules ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/75modules ']'
++ hook=/usr/lib/pm-utils/sleep.d/75modules
++ run_hook /usr/lib/pm-utils/sleep.d/75modules resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/75modules resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/75modules resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/75modules resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/75modules resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/75modules resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/75modules
++ local hook=75modules
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:75modules ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:modules ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/75modules ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/75modules resume suspend
++ case "$1" in
++ resume_modules
++ modreload
++ for x in '"${STORAGEDIR}"/module:*'
++ '[' -O '/var/run/pm-utils/pm-suspend/storage/module:*' ']'
++ continue
++ echo 'Reloaded unloaded modules.'
+Reloaded unloaded modules.
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/75modules resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/75modules resume suspend: '
+/usr/lib/pm-utils/sleep.d/75modules resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=75modules
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 75modules ']'
++ '[' 49bluetooth '>' 75modules ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/49bluetooth ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/49bluetooth ']'
++ hook=/usr/lib/pm-utils/sleep.d/49bluetooth
++ run_hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/49bluetooth
++ local hook=49bluetooth
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:49bluetooth ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:bluetooth ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/49bluetooth ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/49bluetooth resume suspend
++ '[' -f /proc/acpi/ibm/bluetooth ']'
++ case "$1" in
++ resume_bluetooth
++ state_exists ibm_bluetooth
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:ibm_bluetooth ']'
++ restorestate ibm_bluetooth
++ state_exists ibm_bluetooth
++ '[' -O /var/run/pm-utils/pm-suspend/storage/state:ibm_bluetooth ']'
++ cat /var/run/pm-utils/pm-suspend/storage/state:ibm_bluetooth
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/49bluetooth resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/49bluetooth resume suspend: '
+/usr/lib/pm-utils/sleep.d/49bluetooth resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=49bluetooth
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 49bluetooth ']'
++ '[' 01grub '>' 49bluetooth ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/01grub ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/01grub ']'
++ hook=/usr/lib/pm-utils/sleep.d/01grub
++ run_hook /usr/lib/pm-utils/sleep.d/01grub resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/01grub resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/01grub resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/01grub resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/01grub resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/01grub resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/01grub
++ local hook=01grub
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:01grub ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:grub ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/01grub ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/01grub resume suspend
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/01grub resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/01grub resume suspend: '
+/usr/lib/pm-utils/sleep.d/01grub resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=01grub
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 01grub ']'
++ '[' 00powersave '>' 01grub ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/00powersave ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/00powersave ']'
++ hook=/usr/lib/pm-utils/sleep.d/00powersave
++ run_hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/00powersave resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/00powersave
++ local hook=00powersave
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:00powersave ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:powersave ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/00powersave ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/00powersave resume suspend
++ command_exists pm-powersave
++ type pm-powersave
++ return 0
++ case $1 in
++ pm-powersave
+++ set -a
+++ PM_UTILS_LIBDIR=/usr/lib/pm-utils
+++ PM_UTILS_ETCDIR=/etc/pm
+++ PM_UTILS_RUNDIR=/var/run/pm-utils
+++ PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/lib/pm-utils/bin
+++ PM_LOGFILE=/var/log/pm-powersave.log
+++ TEMPORARY_CPUFREQ_GOVERNOR=performance
+++ LOCKDIR=/var/run/pm-utils/locks
+++ STORAGEDIR=/var/run/pm-utils/pm-powersave/storage
+++ NA=254
+++ NX=253
+++ DX=252
+++ PM_FUNCTIONS=/usr/lib/pm-utils/functions
+++ PM_QUIRKDB=/usr/lib/pm-utils/video-quirks
+++ PM_LKW_QUIRKS=/etc/pm/last_known_working.quirkdb
+++ LC_COLLATE=C
+++ HIBERNATE_MODE=
+++ HIBERNATE_RESUME_POST_VIDEO=no
+++ SLEEP_MODULE=auto
+++ SUSPEND_MODULES=
+++ HOOK_BLACKLIST=
+++ ADD_PARAMETERS=
+++ DROP_PARAMETERS=
+++ PARAMETERS=/var/run/pm-utils/pm-powersave/storage/parameters
+++ INHIBIT=/var/run/pm-utils/pm-powersave/storage/inhibit
+++ PM_CMDLINE=
+++ BEFORE_HOOKS=
+++ MODULE_HELP=
+++ SUSPEND_MODULE=
+++ HIBERNATE_MODULE=
+++ SUSPEND_HYBRID_MODULE=
+++ PM_HIBERNATE_DELAY=900
+++ PM_RTC=/sys/class/rtc/rtc0
+++ '[' -f /usr/lib/pm-utils/defaults ']'
+++ . /usr/lib/pm-utils/defaults
+++ '[' -f /usr/lib/pm-utils/pm-powersave.defaults ']'
+++ set +a
+++ for cfg in '"${PM_UTILS_ETCDIR}"/config.d/*[!~]' '"${PM_UTILS_ETCDIR}/${STASHNAME}.config.d"/*[!~]'
+++ '[' -f '/etc/pm/config.d/*[!~]' ']'
+++ continue
+++ for cfg in '"${PM_UTILS_ETCDIR}"/config.d/*[!~]' '"${PM_UTILS_ETCDIR}/${STASHNAME}.config.d"/*[!~]'
+++ '[' -f '/etc/pm/pm-powersave.config.d/*[!~]' ']'
+++ continue
+++ . /usr/lib/pm-utils/functions
++++ is_set true
++++ case ${1-UNSET} in
++++ return 0
++++ set -x
+++ profiling
+++ '[' '' = true ']'
+++ profiling
+++ '[' '' = true ']'
+++ profiling
+++ '[' '' = true ']'
+++ '[' auto = auto ']'
+++ SLEEP_MODULE='tuxonice uswsusp'
+++ for mod in '$SLEEP_MODULE'
+++ mod=/usr/lib/pm-utils/module.d/tuxonice
+++ '[' -f /usr/lib/pm-utils/module.d/tuxonice ']'
+++ . /usr/lib/pm-utils/module.d/tuxonice
++++ export TUXONICE_LOC
++++ for loc in '"/sys/power/tuxonice"' '"/sys/power/suspend2"'
++++ '[' -d /sys/power/tuxonice ']'
++++ for loc in '"/sys/power/tuxonice"' '"/sys/power/suspend2"'
++++ '[' -d /sys/power/suspend2 ']'
++++ '[' -n '' ']'
++++ '[' -z '' -a -n '' ']'
++++ '[' -z '' -a -n '' ']'
+++ for mod in '$SLEEP_MODULE'
+++ mod=/usr/lib/pm-utils/module.d/uswsusp
+++ '[' -f /usr/lib/pm-utils/module.d/uswsusp ']'
+++ . /usr/lib/pm-utils/module.d/uswsusp
++++ '[' -z '' ']'
++++ command_exists s2ram
++++ type s2ram
++++ return 1
++++ '[' -z '' ']'
++++ '[' -f /sys/power/disk ']'
++++ grep -q disk /sys/power/state
++++ '[' -c /dev/snapshot ']'
++++ command_exists s2disk
++++ type s2disk
++++ return 1
++++ '[' -z '' ']'
++++ grep -q mem /sys/power/state
++++ command_exists s2both
++++ type s2both
++++ return 1
+++ '[' -z '' ']'
+++ grep -q mem /sys/power/state
+++ SUSPEND_MODULE=kernel
+++ '[' -z '' ']'
+++ '[' -f /sys/power/disk ']'
+++ grep -q disk /sys/power/state
+++ HIBERNATE_MODULE=kernel
+++ '[' -z '' -a -w /sys/class/rtc/rtc0/wakealarm ']'
+++ check_suspend
+++ '[' -n kernel ']'
+++ check_hibernate
+++ '[' -n kernel ']'
+++ is_set no
+++ case ${1-UNSET} in
+++ return 1
+++ SUSPEND_HYBRID_MODULE=kernel
++ case $1 in
++ lock_and_load
++ try_lock pm-powersave.lock
++ local lock=/var/run/pm-utils/locks/pm-powersave.lock
++ mkdir -p /var/run/pm-utils/locks
++ touch /var/run/pm-utils/locks/pm-powersave.lock
++ exec
++ flock -x -n 3
++ return 0
++ trap remove_powersave_lock 0
++ mkdir -p /var/run/pm-utils/pm-powersave/storage
++ rm -f /var/run/pm-utils/pm-powersave/storage/inhibit
++ load_hook_blacklist
++ '[' '' ']'
++ return
++ init_logfile /var/log/pm-powersave.log
++ '[' -z /var/log/pm-powersave.log ']'
++ '[' -h /var/log/pm-powersave.log ']'
++ '[' -f /var/log/pm-powersave.log -a '!' -O /var/log/pm-powersave.log ']'
++ export LOGGING=true
++ LOGGING=true
++ exec
++ exit 0
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/00powersave resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/00powersave resume suspend: '
+/usr/lib/pm-utils/sleep.d/00powersave resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=00powersave
++ IFS='
+'
++ for base in '$(IFS="${oifs}"; for f in "$syshooks/"*[!~] "$phooks/"*[!~];
+		do [ -O "$f" ] && echo ${f##*/} ; done | $sort | uniq)'
++ IFS=' 	
+'
++ '[' reverse -a reverse = reverse -a 00powersave ']'
++ '[' 00logging '>' 00powersave ']'
++ '[' '!' reverse ']'
++ update_parameters
++ '[' -f /var/run/pm-utils/pm-suspend/storage/parameters.new ']'
++ return
++ '[' -f /etc/pm/sleep.d/00logging ']'
++ '[' -f /usr/lib/pm-utils/sleep.d/00logging ']'
++ hook=/usr/lib/pm-utils/sleep.d/00logging
++ run_hook /usr/lib/pm-utils/sleep.d/00logging resume suspend
++ _run_hook /usr/lib/pm-utils/sleep.d/00logging resume suspend
++ log 'Running hook /usr/lib/pm-utils/sleep.d/00logging resume suspend:'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Running hook /usr/lib/pm-utils/sleep.d/00logging resume suspend:' = -n ']'
++ printf '%s\n' 'Running hook /usr/lib/pm-utils/sleep.d/00logging resume suspend:'
+Running hook /usr/lib/pm-utils/sleep.d/00logging resume suspend:
++ hook_ok /usr/lib/pm-utils/sleep.d/00logging
++ local hook=00logging
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:00logging ']'
++ '[' -f /var/run/pm-utils/pm-suspend/storage/disable_hook:logging ']'
++ '[' -x /usr/lib/pm-utils/sleep.d/00logging ']'
++ return 0
++ /usr/lib/pm-utils/sleep.d/00logging resume suspend
++ case "$1" in
++ log ''
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' '' = -n ']'
++ printf '%s\n' ''
+
++ log -n '/usr/lib/pm-utils/sleep.d/00logging resume suspend: '
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' -n = -n ']'
++ fmt=%s
++ shift
++ printf %s '/usr/lib/pm-utils/sleep.d/00logging resume suspend: '
+/usr/lib/pm-utils/sleep.d/00logging resume suspend: + hook_exit_status 0
++ case $1 in
++ log success.
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' success. = -n ']'
++ printf '%s\n' success.
+success.
++ LAST_HOOK=00logging
++ IFS='
+'
++ IFS=' 	
+'
++ inhibited
++ '[' -f /var/run/pm-utils/pm-suspend/storage/inhibit ']'
++ return 0
+++ date
++ log 'Fri Oct 30 14:37:31 MDT 2015: Finished.'
++ is_set true
++ case ${1-UNSET} in
++ return 0
++ local 'fmt=%s\n'
++ '[' 'Fri Oct 30 14:37:31 MDT 2015: Finished.' = -n ']'
++ printf '%s\n' 'Fri Oct 30 14:37:31 MDT 2015: Finished.'
+Fri Oct 30 14:37:31 MDT 2015: Finished.
++ exit 0
++ remove_suspend_lock
++ release_lock pm-suspend.lock
++ local lock=/var/run/pm-utils/locks/pm-suspend.lock
++ rm -f /var/run/pm-utils/locks/pm-suspend.lock
++ return 0

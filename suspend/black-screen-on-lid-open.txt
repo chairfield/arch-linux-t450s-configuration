@@ -1,0 +1,17 @@
+First clue in journalctl (level 3):
+Oct 30 14:16:38 ARCHER kernel: pci_pm_suspend(): hcd_pci_suspend+0x0/0x30 [usbcore] returns -16
+Oct 30 14:16:38 ARCHER kernel: dpm_run_callback(): pci_pm_suspend+0x0/0x150 returns -16
+Oct 30 14:16:38 ARCHER kernel: PM: Device 0000:00:14.0 failed to suspend async: error -16
+Oct 30 14:16:38 ARCHER kernel: PM: Some devices failed to suspend, or early wake event detected
+
+This leads me to two possible solutions found here:
+https://bbs.archlinux.org/viewtopic.php?id=93957
+
+From /var/log/pm-suspend.log (installed pm-utils and ran sudo PM_DEBUG=true pm-suspend):
+usbcore               196608  7 btusb,uvcvideo,ehci_hcd,ehci_pci,usbhid,xhci_hcd,xhci_pci
+
+I'm trying the script included in the forum above.
+    I may need to toy with the drivers it suspends, as I have more under usbcore than the OP does
+    I'm switching my hibernate func over to: PM_DEBUG=true pm-hibernate in order to catch next error
+
+
