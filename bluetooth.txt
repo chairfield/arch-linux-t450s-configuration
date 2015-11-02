@@ -1,0 +1,36 @@
+I'm getting the following systemd errors:
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Failed to obtain handles for "Service Changed" characteristic
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Error adding Link Loss service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Current Time Service could not be registered
+Oct 24 16:53:11 ARCHER bluetoothd[452]: gatt-time-server: Input/output error (5)
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Not enough free handles to register service
+Oct 24 16:53:11 ARCHER bluetoothd[452]: Sap driver initialization failed.
+Oct 24 16:53:11 ARCHER bluetoothd[452]: sap-server: Operation not permitted (1)
+
+Note that I'm getting the following pulseaudio errors right after the bluetooth ones:
+Oct 24 12:30:46 ARCHER pulseaudio[2916]: bind(): Address already in use
+Oct 24 12:30:46 ARCHER pulseaudio[2916]: Failed to load module "module-native-protocol-unix" (argument: 
+Oct 24 12:30:46 ARCHER pulseaudio[2916]: Module load failed.
+Oct 24 12:30:46 ARCHER pulseaudio[2916]: Failed to initialize daemon.
+
+Suggestions from:
+https://bbs.archlinux.org/viewtopic.php?id=195886
+- FAILED: Install pulseaudio-bluetooth
+- FAILED: Check rfkill list
+
+Clue:
+rfkill list shows two Bluetooth devices (hci0 and tpacpi_bluetooth_sw)
+
+Attempt:
+- Disabling acpid.service
+    - Result: it halved the number of bluetooth errors
+- Disabling bluetooth.service (removed dbus-org.bluez.service as well)
+    - Result: removed the other half
+        Going to try 10 hibernates
+
+NOTABLE: 10 successful hibernates with both acpid.service and bluetooth.service disabled
