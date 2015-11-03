@@ -34,3 +34,25 @@ Attempt:
         Going to try 10 hibernates
 
 NOTABLE: 10 successful hibernates with both acpid.service and bluetooth.service disabled
+
+Failed to come out of hibernate next morning
+    Noticed the following errors:
+        Nov 02 10:05:30 ARCHER kernel: Bluetooth: hci0 sending Intel patch command (0xfc8e) failed (-19)
+        Nov 02 10:05:32 ARCHER kernel: Bluetooth: hci0 command 0xfc8e tx timeout
+        Nov 02 10:05:32 ARCHER kernel: Bluetooth: hci0 sending frame failed (-19)
+        Nov 02 10:05:34 ARCHER kernel: Bluetooth: hci0 command 0xfc11 tx timeout
+        Nov 02 10:05:40 ARCHER kernel: Bluetooth: hci0 exiting Intel manufacturer mode failed (-110)
+
+Ideas:
+- Disabled in BIOS?
+- Why is it soft-blocked?
+- Uninstall all bluetooth modules temporarily?
+    Removed pulseaudio-bluetooth, bluez, bluez-libs, and bluez-utils
+
+Didn't work! Still encountering the above errors on reboot
+
+Going to try unblocking bluetooth with a systemd service a la: https://bbs.archlinux.org/viewtopic.php?id=154338
+    Have to reinstall the above packages to get hciconfig
+
+Still failed to thaw with those bluetooth errors on force-restart.
+    Attempting to disable the bluetooth kernel module: install bluetooth /bin/false in /etc/modprobe.d/blacklist-bluetooth.conf
