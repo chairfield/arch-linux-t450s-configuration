@@ -56,3 +56,15 @@ Going to try unblocking bluetooth with a systemd service a la: https://bbs.archl
 
 Still failed to thaw with those bluetooth errors on force-restart.
     Attempting to disable the bluetooth kernel module: install bluetooth /bin/false in /etc/modprobe.d/blacklist-bluetooth.conf
+    Service definition file in: /etc/systemd/system/blacklist-bluetooth.service
+
+Above method induces errors in journalctl. Adding the following kernel parameter:
+    modprobe.blacklist=bluetooth
+    - If this works, delete systemd service and /etc/modprobe.d/blacklist-bluetooth.conf
+
+##########################################################################
+# Idea: bring bluetooth back and suspend it during pm-hibernate/pm-suspend
+# /etc/modprobe.d/blacklist-bluetooth.conf (commented)
+# /etc/systemd/system/unblock-bluetooth.service (reinstated)
+# /usr/local/sbin/unblock-bluetooth.local (reinstated)
+##########################################################################

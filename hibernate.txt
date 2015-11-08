@@ -1,0 +1,4 @@
+Step 1: Blacklist bluetooth module properly
+
+Step 2: Consider actualy hybrid suspend
+    http://askubuntu.com/questions/145443/how-do-i-use-pm-suspend-hybrid-by-default-instead-of-pm-suspend
