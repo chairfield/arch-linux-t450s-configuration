@@ -1,4 +1,10 @@
-Step 1: Blacklist bluetooth module properly
+1. Must blacklist bluetooth
+2. With wicd, no need to blacklist iwlwifi
+3. Must suspend thinkpad_acpi module during hibernate
+    http://www.thinkwiki.org/wiki/Thinkpad-acpi#Hibernate
+    SUSPEND_MODULES stored in /etc/pm/config.d/modules
 
-Step 2: Consider actualy hybrid suspend
-    http://askubuntu.com/questions/145443/how-do-i-use-pm-suspend-hybrid-by-default-instead-of-pm-suspend
+Arch Linux package ships with support for the following backends: kernel, tuxonice, and uswsusp
+
+Needed to switch to linux-lts as my screen stayed black occassionally on thaw with standard kernel
+    I know it's also possible to use video quirks in pm-utils, but I know nothing about them
