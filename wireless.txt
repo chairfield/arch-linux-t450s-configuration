@@ -1,0 +1,2 @@
+wicd works consistently, and even doesn't require that I suspend the iwlwifi module during hibernate
+connman consistently failed after hibernate, even with suspending iwlwifi and iwlmvm
