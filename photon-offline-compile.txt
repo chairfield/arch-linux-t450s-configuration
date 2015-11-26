@@ -1,0 +1,8 @@
+was able to make with the following packages: arm-none-eabi-binutils arm-none-eabi-gcc arm-none-eabi-newlib
+    https://bbs.archlinux.org/viewtopic.php?id=188999
+    TODO: PR to spark/firmware to update Common Errors
+
+Linux version of Particle Dev is coming soon
+    offline is too much of a hassle; drop it
+
+For now, simply write my code into a git repo, and then copy it into build.particle.io
