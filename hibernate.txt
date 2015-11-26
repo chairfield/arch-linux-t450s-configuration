@@ -8,3 +8,31 @@ Arch Linux package ships with support for the following backends: kernel, tuxoni
 
 Needed to switch to linux-lts as my screen stayed black occassionally on thaw with standard kernel
     I know it's also possible to use video quirks in pm-utils, but I know nothing about them
+
+linux-lts didn't work; I got a black screen with an unchanging cursor on thaw (why did it thaw when I ran pm-suspend-hibernate?)
+    Next step: try another backend (tuxonice, probably)
+
+Switch back from pm-utils to systemctl hibernate per:
+    https://bbs.archlinux.org/viewtopic.php?pid=1423442
+Relevant:
+    "I will consider the thread as solved with this lesson:
+     - Don't use pm-utils
+     - Use systemctl hibernate
+     And:
+     - Don't update libsystemd, systemd or linux and than hibernate (or the other way around)."
+
+####################################################################################
+# Strategy:
+# - suspend on lid close
+# - Only hibernate when I have no open/active tasks
+# - Hope hibernate works with linux-ice
+# - Wait at least until the weekend to add any additional hibernate-related features
+####################################################################################
+
+Install TuxOnIce hibernate-script from: http://tuxonice.net/files/hibernate-script-2.0.tar.gz
+Error trying to install tuxonice-userui from AUR, see comments: https://aur.archlinux.org/packages/tuxonice-userui/
+TuxOnIce errors:
+    Sometimes doesn't resume
+    Always corrupts my zsh history files
+    Doesn't find the lzo module
+    New kernel error: [drm:gen8_irq_handler [i915]] *ERROR* The master control interrupt lied (SDE)!
