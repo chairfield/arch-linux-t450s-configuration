@@ -6,3 +6,5 @@ Linux version of Particle Dev is coming soon
     offline is too much of a hassle; drop it
 
 For now, simply write my code into a git repo, and then copy it into build.particle.io
+
+"particle flash --usb tinker" does work locally/offline, though, with particle-cli
