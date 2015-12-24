@@ -1,2 +1,11 @@
 wicd works consistently, and even doesn't require that I suspend the iwlwifi module during hibernate
 connman consistently failed after hibernate, even with suspending iwlwifi and iwlmvm
+
+Method for connecting in a new place:
+1. start wicd.service and run wicd-gtk
+2. scan to find name of wireless (bssid not necessary at least if no key required)
+3. update wpa_supplicant.conf
+4. reboot
+
+TODO: learn to scan without wicd
+TODO: does restarting wpa_supplicant.service avoid reboot?
