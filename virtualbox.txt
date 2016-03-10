@@ -1,0 +1,1 @@
+My virtualbox modules broke upon upgrading my lts kernel. The fix was to uninstall and reinstall all my virtualbox packages. I may be able to get away with only uninstalling some in the future. Not sure why the triggered dkms compilation didn't fix. Also, I moved /etc/modules-load.d/virtualbox.conf elsewhere when installing, and only moved it back after I successfully modprobed.
